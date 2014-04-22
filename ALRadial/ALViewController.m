@@ -52,18 +52,25 @@
 - (NSInteger) numberOfItemsInRadialMenu:(ALRadialMenu *)radialMenu {
 	//FIXME: dipshit, change one of these variable names
 	if (radialMenu == self.radialMenu) {
-		return 9;
+		return 4;
 	} else if (radialMenu == self.socialMenu) {
 		return 3;
 	}
 	
 	return 0;
 }
-
+- (NSInteger) arcStartForRadialMenu:(ALRadialMenu *)radialMenu
+{
+    return 180;
+}
+- (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu
+{
+    return 40;
+}
 
 - (NSInteger) arcSizeForRadialMenu:(ALRadialMenu *)radialMenu {
 	if (radialMenu == self.radialMenu) {
-		return 360;
+		return 90;
 	} else if (radialMenu == self.socialMenu) {
 		return 90;
 	}
